@@ -1,0 +1,24 @@
+
+.academic .academic__container{
+    background-color: peru;
+    border-radius: 20%;
+}
+.academic__courses__box{
+    padding: 16px;
+    gap: 10px;
+    width: 468px;
+    height: 286px;  
+    background: white;
+    margin: 2.5rem 7.5rem 2.5rem 7.5rem;    
+    border-radius: 20%;
+}
+.academic__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+}
+.academic__courses__item__subtitle{
+    font-size: 1rem;
+    text-align: center;
+}

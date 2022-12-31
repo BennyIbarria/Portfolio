@@ -1,0 +1,1754 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+   --color-primary: #F2F2F2;
+   --cor-de-fundo: #F2F2F2;
+   --cor-de-link: #000;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    
+}
+ol, ul,li {
+    list-style: none;
+}
+
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (max-width: 768px) {
+    /*Sección Menu*/
+.menu__header .container{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: beige;
+    
+  }
+  .logoHeader{
+      width: 100px;
+      height: 50px;
+      margin-left: 2em;
+      
+  }  
+  .menu__title{
+      font-family: 'raleway', sans-serif;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 19px; 
+      margin: 0 1em 0 1em;   
+  }
+  .header-Principal-nav{
+      display: flex;      
+  }
+  a{
+      text-decoration: none;
+      margin: 0 5px 0 10px;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-size: 10px;
+      line-height: 30px;
+      color: rgb(210, 214, 216);
+      background-color: #64b2cf;
+      text-decoration: none;
+      transition: .5s;
+      display: block;
+      border-bottom: 1px solid #64b2cf;
+  }
+  a {
+      background-image: linear-gradient(
+        to right,
+        #54b3d6,
+        #54b3d6 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      display: inline-block;
+      padding: 1px 0;
+      position: relative;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: var(--cor-de-link);
+      transition: all 0.3s ease-in-out;
+    }
+    a:before {
+      content: '';
+      background: #54b3d6;
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+     background-position: 0;
+    }
+    a:hover::before {
+      width:100%;
+    }   
+  .imagePerfil{
+      display:flex;
+      flex-direction: row;
+      width: 25%;
+      height: 40%;
+      border-radius: 50%;
+      margin: 0 0 0 4em;
+      float: right;
+  }
+  .titulo .titulo__container {
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    background-color: beige;
+    margin-left:1em ;
+}
+.title__bio {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 2em 0 2em 1em;
+}
+.container_entry{
+    flex-direction: row;    
+}
+.title__network{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 5px;
+    line-height: 19px;
+    margin: 20em 0 0 0;
+}
+.title__network__item_g
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.title__network__item_l
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.title__network__item_c
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.about .about__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 0 0 0;
+    background-color: bisque;
+  }
+  .about__title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    margin: 0 0 0.5em 20rem;
+  }
+  .about__paragraph{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    margin:2em 0 0 1em;
+  }
+  .colisionAI{
+    display: inline-flex;
+    width: 20%;
+    height: 20%;
+    margin: 0 0 0 0;
+    vertical-align: center;
+  }
+  .skills .skills__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 7.5rem 0 7.5rem;
+    align-items: center;
+}
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+.skills__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+}
+.hobbies .hobbies__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 7.5rem 0 7.5rem;
+    align-items: center;
+}
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+}
+.hobbies__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+}
+.academic .academic__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: bisque;
+    justify-content: space-between;
+    margin: 2em 0 0 0;
+    width: 752px;
+    
+  }
+  .academic__courses__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    width: 468px;
+    height: 286px;
+    background: white;
+    margin: 2.5rem 7.5rem 2.5rem 7.5rem;
+  }
+  .academic__title {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+  }
+  .academic__courses__item__subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .experience .experiencie__container{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 1em 0;
+    align-items: center;
+}
+.experience__section__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    margin: 2em 0 0 0;
+    color: #000000;
+    text-align: center;
+}
+.experiencie__box{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 2rem 4rem 7.5rem; 
+    align-items: center;
+}
+.experience__info{
+    display:flex;
+    flex-direction: column;
+    margin: 0 0 0 2rem;
+}
+.experiencia__botao--repo{
+    width: 105px;
+    height: 51px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2A7AE4;
+    border: 1px solid #2A7AE4;
+}
+.experience__botao--demo{
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 10px;
+    width: 105px;
+    height: 51px;
+    background: #2A7AE4;
+    border: 1px solid #2A7AE4;
+}
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+}
+/*********************************************************************************************** Movile responsive **********************************************************/
+@media (max-width: 280px) {
+    
+    .menu__header .container{
+        display: flex;
+        flex-direction: column;
+      }
+      .logoHeader{
+          display: none;
+      }  
+      .header-Principal-nav{
+          display: flex; 
+          flex-direction: column;     
+      }
+      .imagePerfil{
+          display:none;
+      }
+      .container_entry{
+        display: flex;
+        flex-direction: column;  
+        background-color: white;  
+        text-align: justify;
+    }
+      .titulo .titulo__container {
+        margin: 1em 0 0 0;
+    }
+    .title__bio {
+        font-size: 10px;
+        line-height: 19px;    
+    }
+    
+    .title__network{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-size: 5px;
+        line-height: 19px;
+        margin: 0 0 0 0;
+        align-items: center;
+    }
+    .title__network__item_g
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2em 0 0;
+        
+    }
+    .title__network__item_l
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2em 0 0;
+    }
+    .title__network__item_c
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2em 0 0;
+    }
+    .about .about__container {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 0 0 0;
+        background-color: black;
+      }
+      .about__title{
+        font-family: 'Dancing Script', cursive;
+        font-size: 1rem;
+        text-align: center;
+        margin: 1em 0 0.5em 0;
+      }
+      .about__paragraph{
+        display: flex;
+        flex-direction: row;
+        font-family: 'Raleway', sans-serif;
+        font-size: 10px;
+        text-align: justify;
+        margin:1em 0 1em 1em;
+      }
+      .colisionAI{
+       
+        width: 20%;
+        height: 20%;
+        margin: 3.5em 0 0 0;
+       
+      }
+      .skills__title{
+        font-size: 1.5rem;
+        font-weight: 1000;
+        color: #000000;
+        text-align: center;
+        margin: 1em 0 1em 0;
+    }
+      .skills .skills__container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 0;
+        
+    }
+    .skills__box{
+        width: 120px;
+        height: 100px;
+        background-color: white;
+        margin: 0.5em 0 0.5em 4em;
+    }
+    
+    .skills__name{
+        font-size: 12px;
+    }
+    
+    .hobbies__title{
+        font-size: 1.5rem;
+        font-weight: 1000;
+        color: #000000;
+        text-align: center;
+        margin: 1em 0 1em 0;
+    }
+    .hobbies .hobbies__container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 0 0;
+        align-items: center;
+    }
+    .hobbies__box{
+        display: flex;
+        flex-direction: column;
+        width: 120px;
+        height: 100px;
+        background-color: white;
+        margin: 0.5em 0 0.5em 4em;
+    }
+    .hobbies__img{
+        display: flex;
+        flex-direction: column;
+        width: 45px;
+        height: 35px;
+        margin: 1em 0 0 0;   
+    }
+    .hobbies__name{
+        font-size: 12px;
+    }
+    
+    .academic .academic__container {   
+        background-color: peru;
+        margin: 2em 0 0 0;
+        width: 100%;
+        
+      }
+      .academic__courses__box {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        background: white;
+        margin: 1em 0 1em 1.25em;
+      }
+      .academic__title {
+        font-size: 1rem;
+        color: #000000;
+        text-align: center;
+        margin: 1em 0 0 0;    
+    }
+      .academic__courses__item__img{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 3em 0 0;
+      }
+      .academic__courses__item__title{
+        font-size: 7px;   
+        text-align: left; 
+        flex-wrap: wrap;
+      }
+    
+      .academic__courses__item__subtitle {
+        font-size: 6px;
+        text-align: left;
+      }
+      .experience .experiencie__container{
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0 1em 0;
+        align-items: center;
+        
+    }
+    .experience__section__title{
+        font-size: 1.5rem;
+        font-weight: 1000;
+        margin: 2em 0 0 0;
+        color: #000000;
+        text-align: center;
+    }
+    
+    .experience__img{
+        
+        width: 200px;
+        margin: 0 2em 0 2em;
+    }
+    .experience__title{
+        font-size: 16px;
+        text-align: center;
+        margin: 0.5em 0 0.5em 0;
+    }
+    .experience__text{
+        font-size: 14px;
+        text-align: center;
+        margin: 0.5em 0 0.5em 0;
+    
+    }
+    .experiencia__botao--repo{
+        
+        width: 70px;
+        height: 40px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-size: 10px;   
+    }
+    .experience__botao--demo{
+        display: inline-flex;
+        padding: 10px;
+        gap: 10px;
+        width: 70px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .formcontato .formcontato__contacto{   
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+    }
+    .formcontato__img{
+        width:100px;
+        height: 100px;;
+    }    
+    .formcontato__title{
+    font-size: 1.5rem;
+    }    
+    .formcontato__text{
+        font-size: 12px;
+        text-align: center;
+    }
+    .formcontato__form{
+       
+        width: 50%;
+        height: 50%;
+    
+    }
+    .formcontato__input  {
+        margin: 1rem 0 1rem 0;
+        width:100px;
+        height:50px;
+        border-radius: 5px;
+    }
+    .formcontato__textarea{
+        margin: 1rem 0 1rem 0;
+        width:100px;
+        height:50px;
+        border-radius: 5px;
+    }
+    .formcontato__botao{
+        margin: 1rem 0 1rem 0;
+        padding: 10px;
+        background-color: #2A72E4;;
+        color: #110f0f;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+     } 
+     input:invalid {
+        box-shadow: 0 0 5px 1px red;
+      }
+    }
+/*********************************************Responsivo desde 281 hasta 412*********************************************************************************************/
+@media (min-width: 281px) and (max-width: 412px){
+   /*Sección Menu*/
+   .menu__header .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .logoHeader{
+      display: none;
+  }  
+  .header-Principal-nav{
+      display: flex; 
+      flex-direction: column;     
+  }
+  .imagePerfil{
+      display:none;
+  }
+  .container_entry{
+    display: flex;
+    flex-direction: column;  
+    background-color: white;  
+    width: max-content;
+    text-align: center;
+}
+  .titulo .titulo__container {
+    margin: 2em 0 0 0;
+}
+.title__bio {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 19px;    
+}
+
+.title__network{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 5px;
+    line-height: 19px;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+.title__network__item_g
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+    
+}
+.title__network__item_l
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.title__network__item_c
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.about .about__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 0 0 0;
+    background-color: black;
+  }
+  .about__title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+  }
+  .about__paragraph{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    text-align: justify;
+    margin:1em 0 1em 1em;
+  }
+  .colisionAI{
+   
+    width: 20%;
+    height: 20%;
+    margin: 2em 0 0 0;
+   
+  }
+  .skills__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+  .skills .skills__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    
+}
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+    margin: 0.5em 0 0 0;
+}
+
+.skills__name{
+    font-size: 12px;
+}
+
+.hobbies__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+.hobbies .hobbies__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+    margin: 0.5em 0 0 0;
+}
+.hobbies__img{
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    height: 35px;
+    margin: 1em 0 0 0;   
+}
+.hobbies__name{
+    font-size: 12px;
+}
+
+.academic .academic__container {   
+    background-color: peru;
+    margin: 2em 0 0 0;
+    width: 100%;
+    
+  }
+  .academic__courses__box {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background: white;
+    margin: 1em 0 1em 1.25em;
+  }
+  .academic__title {
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 0 0;    
+}
+  .academic__courses__item__img{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 3em 0 0;
+  }
+  .academic__courses__item__title{
+    font-size: 12px;   
+    text-align: center; 
+  }
+
+  .academic__courses__item__subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+  .experience .experiencie__container{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 1em 0;
+    align-items: center;
+    
+}
+.experience__section__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    margin: 2em 0 0 0;
+    color: #000000;
+    text-align: center;
+}
+
+.experience__img{
+    
+    width: 260px;
+    margin: 0 2em 0 2em;
+}
+.experience__title{
+    font-size: 16px;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+}
+.experience__text{
+    font-size: 14px;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+
+}
+.experiencia__botao--repo{
+    width: 80px;
+    height: 40px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 10px;   
+}
+.experience__botao--demo{
+    display: inline-flex;
+    padding: 16px;
+    gap: 10px;
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+}
+.formcontato .formcontato__contacto{   
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.formcontato__img{
+    width:100px;
+    height: 100px;;
+}    
+.formcontato__title{
+font-size: 1.5rem;
+}    
+.formcontato__text{
+    font-size: 12px;
+    text-align: center;
+}
+.formcontato__form{
+   
+    width: 50%;
+    height: 50%;
+
+}
+.formcontato__input  {
+    margin: 1rem 0 1rem 0;
+    width:150px;
+    height:50px;
+    border-radius: 5px;
+}
+.formcontato__textarea{
+    margin: 1rem 0 1rem 0;
+    width:150px;
+    height:50px;
+    border-radius: 5px;
+}
+.formcontato__botao{
+    margin: 1rem 0 1rem 0;
+    padding: 10px;
+    background-color: #2A72E4;;
+    color: #110f0f;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+ } 
+ input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+}
+/*******************************************************Responsivo desde 413px hasta 415 para iphone**********************************************************************/
+@media (min-width: 413px) and (max-width: 415px){
+     /*Sección Menu*/
+   .menu__header .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .logoHeader{
+      display: none;
+  }  
+  .header-Principal-nav{
+      display: flex; 
+      flex-direction: column;     
+  }
+  .imagePerfil{
+      display:none;
+  }
+  .container_entry{
+    display: flex;
+    flex-direction: column;  
+    background-color: white;  
+    width: max-content;
+    text-align: center;
+}
+  .titulo .titulo__container {
+    margin: 2em 0 0 0;
+}
+.title__bio {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 19px;    
+}
+
+.title__network{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 5px;
+    line-height: 19px;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+.title__network__item_g
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+    
+}
+.title__network__item_l
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.title__network__item_c
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 6em 0 0;
+}
+.about .about__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 0 0 0;
+    background-color: black;
+  }
+  .about__title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+  }
+  .about__paragraph{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    text-align: justify;
+    margin:1em 0 1em 1em;
+  }
+  .colisionAI{
+   
+    width: 20%;
+    height: 20%;
+    margin: 2em 0 0 0;
+   
+  }
+  .skills__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+  .skills .skills__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    
+}
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+    margin: 0.5em 0 0 0;
+}
+
+.skills__name{
+    font-size: 12px;
+}
+
+.hobbies__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+.hobbies .hobbies__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 100px;
+    background-color: white;
+    margin: 0.5em 0 0 0;
+}
+.hobbies__img{
+    display: flex;
+    flex-direction: column;
+    width: 45px;
+    height: 35px;
+    margin: 1em 0 0 0;   
+}
+.hobbies__name{
+    font-size: 12px;
+}
+
+.academic .academic__container {   
+    background-color: peru;
+    margin: 2em 0 0 0;
+    width: 100%;
+    
+  }
+  .academic__courses__box {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background: white;
+    margin: 1em 0 1em 1.25em;
+  }
+  .academic__title {
+    font-size: 1.5rem;
+    color: #000000;
+    text-align: center;
+    margin: 1em 0 0 0;    
+}
+  .academic__courses__item__img{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 3em 0 0;
+  }
+  .academic__courses__item__title{
+    font-size: 12px;   
+    text-align: center; 
+  }
+
+  .academic__courses__item__subtitle {
+    font-size: 12px;
+    text-align: center;
+  }
+  .experience .experiencie__container{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 1em 0;
+    align-items: center;
+    
+}
+.experience__section__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    margin: 2em 0 0 0;
+    color: #000000;
+    text-align: center;
+}
+
+.experience__img{
+    
+    width: 260px;
+    margin: 0 2em 0 2em;
+}
+.experience__title{
+    font-size: 16px;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+}
+.experience__text{
+    font-size: 14px;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+
+}
+.experiencia__botao--repo{
+    width: 80px;
+    height: 40px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 10px;   
+}
+.experience__botao--demo{
+    display: inline-flex;
+    padding: 16px;
+    gap: 10px;
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+}
+.formcontato .formcontato__contacto{   
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.formcontato__img{
+    width:100px;
+    height: 100px;;
+}    
+.formcontato__title{
+font-size: 1.5rem;
+}    
+.formcontato__text{
+    font-size: 12px;
+    text-align: center;
+}
+.formcontato__form{
+   
+    width: 50%;
+    height: 50%;
+
+}
+.formcontato__input  {
+    margin: 1rem 0 1rem 0;
+    width:150px;
+    height:50px;
+    border-radius: 5px;
+}
+.formcontato__textarea{
+    margin: 1rem 0 1rem 0;
+    width:150px;
+    height:50px;
+    border-radius: 5px;
+}
+.formcontato__botao{
+    margin: 1rem 0 1rem 0;
+    padding: 10px;
+    background-color: #2A72E4;;
+    color: #110f0f;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+ } 
+ input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+}
+/***************************************************************/
+@media (min-width: 416px) and (max-width: 540px){
+    /*Sección Menu*/
+  .menu__header .container{
+   display: flex;
+   flex-direction: column;
+ }
+ .logoHeader{
+     display: none;
+ }  
+ .header-Principal-nav{
+     display: flex; 
+     flex-direction: column;     
+ }
+ .imagePerfil{
+     display:none;
+ }
+ .container_entry{
+   display: flex;
+   flex-direction: column;  
+   background-color: white;  
+   width: max-content;
+   text-align: center;
+}
+ .titulo .titulo__container {
+   margin: 2em 0 0 0;
+}
+.title__bio {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 10px;
+   line-height: 19px;    
+}
+
+.title__network{
+   display: flex;
+   flex-direction: column;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 5px;
+   line-height: 19px;
+   margin: 0 0 0 0;
+   align-items: center;
+}
+.title__network__item_g
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+   
+}
+.title__network__item_l
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+}
+.title__network__item_c
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+}
+.about .about__container {
+   width: 100%;
+   display: flex;
+   flex-direction: row-reverse;
+   margin: 0 0 0 0;
+   background-color: black;
+ }
+ .about__title{
+   font-family: 'Dancing Script', cursive;
+   font-size: 1.5rem;
+   text-align: center;
+   margin: 1em 0 0.5em 0;
+ }
+ .about__paragraph{
+   display: flex;
+   flex-direction: row;
+   font-family: 'Raleway', sans-serif;
+   font-size: 10px;
+   text-align: justify;
+   margin:1em 0 1em 1em;
+ }
+ .colisionAI{
+  
+   width: 20%;
+   height: 20%;
+   margin: 2em 0 0 0;
+  
+ }
+ .skills__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 1em 0;
+}
+ .skills .skills__container{
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 0 0;
+   
+}
+.skills__box{
+   display: flex;
+   flex-direction: column;
+   width: 120px;
+   height: 100px;
+   background-color: white;
+   margin: 0.5em 0 0 0;
+}
+
+.skills__name{
+   font-size: 12px;
+}
+
+.hobbies__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 1em 0;
+}
+.hobbies .hobbies__container{
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 0 0;
+   align-items: center;
+}
+.hobbies__box{
+   display: flex;
+   flex-direction: column;
+   width: 120px;
+   height: 100px;
+   background-color: white;
+   margin: 0.5em 0 0 0;
+}
+.hobbies__img{
+   display: flex;
+   flex-direction: column;
+   width: 45px;
+   height: 35px;
+   margin: 1em 0 0 0;   
+}
+.hobbies__name{
+   font-size: 12px;
+}
+
+.academic .academic__container {   
+   background-color: peru;
+   margin: 2em 4em 0 4em;
+   width: 80%;
+   align-items: center;
+   
+ }
+ .academic__courses__box {
+   width: 80%;
+   background: white;
+   margin: 1em 0 1em 1.5em;
+ }
+ .academic__title {
+   font-size: 1.5rem;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 0 0;    
+}
+ .academic__courses__item__img{
+   display: flex;
+   flex-direction: column;
+   width: 200px;
+   margin: 0 3em 0 0;
+ }
+ .academic__courses__item__title{
+   font-size: 12px;   
+   text-align: center; 
+ }
+
+ .academic__courses__item__subtitle {
+   font-size: 12px;
+   text-align: center;
+ }
+ .experience .experiencie__container{
+   display: flex;
+   flex-direction: column;
+   margin: 2em 4em 0 4em;
+   align-items: center;
+   width: 80%;
+   
+}
+.experience__section__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   margin: 2em 0 0 0;
+   color: #000000;
+   text-align: center;
+}
+
+.experience__img{
+   
+   width: 260px;
+   margin: 0 2em 0 2em;
+}
+.experience__title{
+   font-size: 16px;
+   text-align: center;
+   margin: 0.5em 0 0.5em 0;
+}
+.experience__text{
+   font-size: 14px;
+   text-align: center;
+   margin: 0.5em 0 0.5em 0;
+
+}
+.experiencia__botao--repo{
+   width: 80px;
+   height: 40px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 10px;   
+}
+.experience__botao--demo{
+   display: inline-flex;
+   padding: 16px;
+   gap: 10px;
+   width: 80px;
+   height: 40px;
+   font-size: 10px;
+}
+.formcontato .formcontato__contacto{   
+   width: 100%;
+   height: 100%;
+   padding: 0 20px;
+}
+.formcontato__img{
+   width:100px;
+   height: 100px;
+   margin-top: 2em;
+}    
+.formcontato__title{
+font-size: 1.5rem;
+}    
+.formcontato__text{
+   font-size: 12px;
+   text-align: center;
+}
+.formcontato__form{
+  
+   width: 50%;
+   height: 50%;
+
+}
+.formcontato__input  {
+   margin: 1em 4em 1em 4em;
+   width:150px;
+   height:50px;
+   border-radius: 5px;
+}
+.formcontato__textarea{
+   margin: 1em 4em 1em 4em;
+   width:150px;
+   height:50px;
+   border-radius: 5px;
+}
+.formcontato__botao{
+   margin: 1em 4em 1em 4em;
+   padding: 10px;
+   background-color: #2A72E4;;
+   color: #110f0f;
+   border: none;
+   border-radius: 5px;
+   font-size: 12px;
+   cursor: pointer;
+} 
+input:invalid {
+   box-shadow: 0 0 5px 1px red;
+ }
+}
+/**************************************************************/
+@media (min-width: 541px) and (max-width: 768px){
+    /*Sección Menu*/
+  .menu__header .container{
+   display: flex;
+   flex-direction: column;
+ }
+ .logoHeader{
+     display: none;
+ }  
+ .header-Principal-nav{
+     display: flex; 
+     flex-direction: column;     
+ }
+ .imagePerfil{
+     display:none;
+ }
+ .container_entry{
+   display: flex;
+   flex-direction: column;  
+   background-color: white;  
+   width: max-content;
+   text-align: center;
+}
+ .titulo .titulo__container {
+   margin: 2em 0 0 0;
+}
+.title__bio {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 10px;
+   line-height: 19px;    
+}
+
+.title__network{
+   display: flex;
+   flex-direction: column;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 5px;
+   line-height: 19px;
+   margin: 0 0 0 0;
+   align-items: center;
+}
+.title__network__item_g
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+   
+}
+.title__network__item_l
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+}
+.title__network__item_c
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 2em 0 0;
+}
+.about .about__container {
+   width: 100%;
+   display: flex;
+   flex-direction: row-reverse;
+   margin: 0 0 0 0;
+   background-color: black;
+ }
+ .about__title{
+   font-family: 'Dancing Script', cursive;
+   font-size: 1.5rem;
+   text-align: center;
+   margin: 1em 0 0.5em 0;
+ }
+ .about__paragraph{
+   display: flex;
+   flex-direction: row;
+   font-family: 'Raleway', sans-serif;
+   font-size: 10px;
+   text-align: justify;
+   margin:1em 0 1em 1em;
+ }
+ .colisionAI{
+  
+   width: 20%;
+   height: 20%;
+   margin: 2em 0 0 0;
+  
+ }
+ .skills__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 1em 0;
+}
+ .skills .skills__container{
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 0 0;
+   
+}
+.skills__box{
+   display: flex;
+   flex-direction: column;
+   width: 120px;
+   height: 100px;
+   background-color: white;
+   margin: 0.5em 0 0 0;
+}
+
+.skills__name{
+   font-size: 12px;
+}
+
+.hobbies__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 1em 0;
+}
+.hobbies .hobbies__container{
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 0 0;
+   align-items: center;
+}
+.hobbies__box{
+   display: flex;
+   flex-direction: column;
+   width: 120px;
+   height: 100px;
+   background-color: white;
+   margin: 0.5em 0 0 0;
+}
+.hobbies__img{
+   display: flex;
+   flex-direction: column;
+   width: 45px;
+   height: 35px;
+   margin: 1em 0 0 0;   
+}
+.hobbies__name{
+   font-size: 12px;
+}
+
+.academic .academic__container {   
+   background-color: peru;
+   margin: 2em 4em 0 4em;
+   width: 80%;
+   align-items: center;
+   
+ }
+ .academic__courses__box {
+   width: 80%;
+   background: white;
+   margin: 1em 0 1em 1.5em;
+ }
+ .academic__title {
+   font-size: 1.5rem;
+   color: #000000;
+   text-align: center;
+   margin: 1em 0 0 0;    
+}
+ .academic__courses__item__img{
+   display: flex;
+   flex-direction: column;
+   width: 200px;
+   margin: 0 3em 0 0;
+ }
+ .academic__courses__item__title{
+   font-size: 12px;   
+   text-align: center; 
+ }
+
+ .academic__courses__item__subtitle {
+   font-size: 12px;
+   text-align: center;
+ }
+ .experience .experiencie__container{
+   display: flex;
+   flex-direction: column;
+   margin: 2em 4em 0 4em;
+   align-items: center;
+   width: 80%;
+   
+}
+.experience__section__title{
+   font-size: 1.5rem;
+   font-weight: 1000;
+   margin: 2em 0 0 0;
+   color: #000000;
+   text-align: center;
+}
+
+.experience__img{
+   
+   width: 260px;
+   margin: 0 2em 0 2em;
+}
+.experience__title{
+   font-size: 16px;
+   text-align: center;
+   margin: 0.5em 0 0.5em 0;
+}
+.experience__text{
+   font-size: 14px;
+   text-align: center;
+   margin: 0.5em 0 0.5em 0;
+
+}
+.experiencia__botao--repo{
+   width: 80px;
+   height: 40px;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-size: 10px;   
+}
+.experience__botao--demo{
+   display: inline-flex;
+   padding: 16px;
+   gap: 10px;
+   width: 80px;
+   height: 40px;
+   font-size: 10px;
+}
+.formcontato .formcontato__contacto{   
+   width: 100%;
+   height: 100%;
+   padding: 0 20px;
+}
+.formcontato__img{
+   width:100px;
+   height: 100px;
+   margin-top: 2em;
+}    
+.formcontato__title{
+font-size: 1.5rem;
+}    
+.formcontato__text{
+   font-size: 12px;
+   text-align: center;
+}
+.formcontato__form{
+  
+   width: 50%;
+   height: 50%;
+
+}
+.formcontato__input  {
+   margin: 1em 4em 1em 4em;
+   width:150px;
+   height:50px;
+   border-radius: 5px;
+}
+.formcontato__textarea{
+   margin: 1em 4em 1em 4em;
+   width:150px;
+   height:50px;
+   border-radius: 5px;
+}
+.formcontato__botao{
+   margin: 1em 4em 1em 4em;
+   padding: 10px;
+   background-color: #2A72E4;;
+   color: #110f0f;
+   border: none;
+   border-radius: 5px;
+   font-size: 12px;
+   cursor: pointer;
+} 
+input:invalid {
+   box-shadow: 0 0 5px 1px red;
+ }
+}

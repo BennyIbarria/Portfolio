@@ -1,0 +1,27 @@
+.titulo .titulo__container {
+    background-color: var(--cor-de-fundo);
+    margin-left:1em ;
+    align-items: center;
+}
+
+.imagePerfil{
+    width: 25%;
+    height: 45%;
+    border-radius: 50%;
+    margin: 0 0 0 0;
+    align-items: center;
+    margin: 0 0 0 15em;
+    float: right;
+}
+
+.title__bio {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 2em 0 2em 0;
+}
+
+.title__network{
+     margin: 15em 0 0 0;
+}

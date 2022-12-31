@@ -1,0 +1,23 @@
+.hobbies__title{
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+}
+.hobbies .hobbies__container{
+    margin: 0 7.5rem 0 7.5rem; 
+}
+.hobbies__box{
+    padding: 16px;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+    border-radius: 20%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: blueviolet;
+}
+.hobbies__name{
+    color: blueviolet;
+}

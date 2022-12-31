@@ -1,0 +1,191 @@
+@media (max-width: 768px){
+
+/* Menú */
+.logoHeader
+{
+    display: none;
+}
+.menu__title
+{
+    font-size: 2em;
+    margin: 0 0 0 0;
+    
+}
+
+/*title*/
+.menu__header .container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    margin-top: 2em;  
+    
+}
+.header-Principal-nav
+{
+    margin-top: 1em;   
+}
+.titulo .titulo__container 
+{
+    display: flex;
+    align-items: center; 
+    font-size: 1em;
+    flex-direction: row;
+    margin:0 0 0 2em;
+}
+.container_entry
+{
+    flex-direction: row;    
+}
+.title__network
+{
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    margin: 0 0 0 0;
+}
+.imagePerfil
+{
+   display: none;
+}
+.about__title
+{
+    
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .about__paragraph
+  {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    text-align: justify;
+    margin: 0 0 0 1rem;
+    vertical-align: center;
+  }
+  .colisionAI
+  {
+    display: inline-flex;
+    width: 10%;
+    height: 10%;
+    margin: 1em 0 0 2em;
+    vertical-align: center;
+  }
+
+/*Skills*/
+.skills .skills__container
+{
+    display: flex;
+    flex-direction: row;
+    margin: 2em 2em 2em 2em;
+    align-items: center;
+}
+.skills__box
+{
+    display: flex;
+    padding: 16px;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.skills__title
+{
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #000000;
+    margin: 2em 0 0 2em;
+}
+/*Hobbies*/
+.hobbies .hobbies__container
+{
+    display: flex;
+    flex-direction: row;
+    margin: 2em 2em 2em 2em;
+    align-items: center;
+}
+.hobbies__box
+{
+    display: flex;
+    padding: 16px;
+    gap: 8px;
+    width: 176px;
+    height: 174px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+.hobbies__title
+{
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #000000;
+    margin: 2em 0 0 2em;
+}
+
+/*Formación Académica*/
+.academic .academic__container
+{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2em 0 0 2em;
+}
+
+.academic__courses__box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 2em 0 2em 0.2em;           
+}
+
+.academic__title
+{
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+}
+.academic__courses__item__subtitle
+{
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*Experiencia Profesional*/
+.experience .experiencie__container
+{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 95%;
+    margin: 2em 2rem 2rem 2em;
+    
+}
+.experiencie__box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    width: 95%;
+    margin: 2em 2em 2em 2em;
+}
+.experience__section__title
+{
+    font-size: 1.5em;
+    font-weight: 1000;
+    color: #000000;
+    text-align: center;
+    margin: 2em 0 0 0;
+}
+.experience__img
+{
+    width: 70%;
+    height: 70%;
+    margin-top: 5em;
+}
+}

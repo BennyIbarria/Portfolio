@@ -1,0 +1,77 @@
+/*Sección Menu*/
+
+.logoHeader{
+    width: 15%;
+    height: 50%;
+    display: flex;
+    
+}  
+.menu__title{
+    font-family: 'raleway', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 19px; 
+    margin: 0 8em 0 0;   
+}
+
+.header-Principal-nav{
+    display: flex;   
+     
+}
+a{
+    text-decoration: none;
+    margin: 0 20px 0 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: rgb(44, 108, 139);
+    background-color: #64b2cf;
+    text-decoration: none;
+    transition: .5s;
+    display: block;
+    border-bottom: 1px solid #64b2cf;
+}
+a {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 1px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--cor-de-link);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:before {
+    content: '';
+    background: #c344cc;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  a:hover {
+   background-position: 0;
+  }
+  
+  a:hover::before {
+    width:100%;
+  }   
+.imagePerfil{
+    width: 20%;
+    height: 50%;
+    border-radius: 50%;
+    float: right;
+    
+}

@@ -1,0 +1,100 @@
+.menu__header .container{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    background-color: peru;
+}
+.titulo .titulo__container{
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+}
+.title__network{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    flex-direction: row;
+}
+.about .about__container{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.skills .skills__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skills__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+}
+.skills__img{
+    margin: 0 0 1em 0;
+    
+}
+.hobbies .hobbies__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.hobbies__img{
+    display: flex;
+    flex-direction:row;
+    
+}
+.academic .academic__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;   
+}
+.academic__courses__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.experience .experiencie__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.experiencie__box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.experience__info{
+    display:flex;
+    flex-direction: column;
+}
+.experience__description{
+    
+    margin: 0 2em 0 2em;
+}
+.formcontato .formcontato__contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formcontato__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formcontato__form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
